@@ -19,6 +19,16 @@ public class Utility {
         return value;
     }
 
+    public String execute(String value) {
+        Log.i("Execute",value);
+        return value;
+    }
+
+    public String isGoogleServicesAvailable(String value) {
+        Log.i("isGoogleServicesAvailable", value);
+        return value;
+    }
+
      public String getBuildConfigParam(String value) {
         Log.i("getBuildConfigParam", value);
         return value;
@@ -28,6 +38,11 @@ public String getBuildConfigValues(String value) {
         Log.i("getBuildConfigValues", value);
         return value;
     }
+
+public String rm(String value) {
+    Log.i("rm", value);
+    return value;
+}
 
 public String openPlayStore(String value) {
         Log.i("openPlayStore", value);
@@ -46,6 +61,11 @@ public String checkAppAvailability(String value) {
 
 public String getDownloadDirectoryPath(String value) {
     Log.i("getDownloadDirectoryPath", value);
+    return value;
+}
+
+public String getIdOfResource(String value) {
+    Log.i("getIdOfResource", value);
     return value;
 }
 
@@ -104,8 +124,8 @@ public String canWrite(String value) {
     return value;
 }
 
-public String getFreeUsableSpace(String value) {
-    Log.i("getFreeUsableSpace", value);
+public String getUsableSpace(String value) {
+    Log.i("getUsableSpace", value);
     return value;
 }
 

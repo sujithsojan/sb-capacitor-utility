@@ -1,5 +1,4 @@
-package ord.sunbird.capplugin.utility;
-
+package org.sunbird.config;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
