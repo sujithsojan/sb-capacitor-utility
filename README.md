@@ -16,6 +16,7 @@ npx cap sync
 * [`echo(...)`](#echo)
 * [`test(...)`](#test)
 * [`sample(...)`](#sample)
+* [`execute(...)`](#execute)
 * [`getBuildConfigParam(...)`](#getbuildconfigparam)
 * [`getBuildConfigValues(...)`](#getbuildconfigvalues)
 * [`openPlayStore(...)`](#openplaystore)
@@ -89,6 +90,22 @@ sample(options: { value: string; }) => Promise<{ value: string; }>
 | **`options`** | <code>{ value: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
+--------------------
+
+
+### execute(...)
+
+```typescript
+execute(action: string, args: any[]) => Promise<any>
+```
+
+| Param        | Type                |
+| ------------ | ------------------- |
+| **`action`** | <code>string</code> |
+| **`args`**   | <code>any[]</code>  |
+
+**Returns:** <code>Promise&lt;any&gt;</code>
 
 --------------------
 

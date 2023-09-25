@@ -10,6 +10,16 @@ export class UtilityWeb extends WebPlugin implements UtilityPlugin {
 
   }
 
+  async execute(action: string, args: any[]): Promise<any> {
+    console.log('execute',action, args);
+    return action;
+  }
+
+  async isGoogleServicesAvailable(options: {}): Promise<{result: boolean}> {
+    console.log('isGoogleServicesAvailable', options);
+    return { result: true };
+  }
+
   async test(options: { value: string }): Promise<{ value: string }> {
     console.log('test', options);
     return options;
@@ -41,6 +51,12 @@ export class UtilityWeb extends WebPlugin implements UtilityPlugin {
   return result;
 }
 
+async rm(options: { directoryPath: string, directoryToBeSkipped: string }): Promise<{ success: boolean }> {
+  console.log('rm',options);
+  return { success: true };  
+}
+
+
 async openPlayStore(options: { appId: string }): Promise<{ success: boolean }> {
   console.log('openPlayStore', options);
   return { success: true };
@@ -61,6 +77,13 @@ async checkAppAvailability(options: { packageName: string }): Promise<{ availabl
 async getDownloadDirectoryPath(): Promise<{ path: string }> {
   const defaultDownloadPath = '/downloads';
   return { path: defaultDownloadPath };
+}
+
+async getIdOfResource(options: {name: string, resourceType: string}): Promise<{resourceId: number}> {
+ console.log("getIdOfResource",options);
+ const Id = 2;
+ return { resourceId : Id };
+ 
 }
 
 async exportApk(options: { destination: string }): Promise<{success: boolean}> {
@@ -130,8 +153,8 @@ async canWrite(options: { directory: string }): Promise<{ canWrite: boolean }> {
   return { canWrite: true };
 }
 
-async getFreeUsableSpace(options: { directory: string }): Promise<{ space: number }> {
-  console.log('getFreeUsableSpace', options);
+async getUsableSpace(options: { directory: string }): Promise<{ space: number }> {
+  console.log('getUsableSpace', options);
   const freeUsableSpace = 1024; 
   return { space: freeUsableSpace };
 }
